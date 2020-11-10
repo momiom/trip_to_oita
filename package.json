@@ -9,21 +9,26 @@
     "build": "nuxt build",
     "start": "nuxt start",
     "generate": "nuxt generate",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore ."
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "font:subset": "node ./scripts/extract_subset.js",
+    "font:woff": "pipenv run pyftsubset ./assets/fonts/ちはや純.ttf --flavor=woff --text-file=./scripts/subset.txt --output-file=./assets/fonts/chihaya_jyun-sub.woff",
+    "font:woff2": "pipenv run pyftsubset ./assets/fonts/ちはや純.ttf --flavor=woff2 --text-file=./scripts/subset.txt --output-file=./assets/fonts/chihaya_jyun-sub.woff2",
+    "font": "npm run font:subset && npm run font:woff && npm run font:woff2"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/pwa": "^3.0.0-0"
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^1.0.0",
     "@nuxtjs/eslint-config": "^2.0.0",
     "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/tailwindcss": "^1.0.0",
     "babel-eslint": "^10.0.1",
     "eslint": "^6.1.0",
-    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
     "eslint-plugin-prettier": "^3.1.2",
+    "jsdom": "^16.4.0",
     "prettier": "^1.19.1"
   }
 }
