@@ -14,4 +14,3 @@ brotli = "*"
 python_version = "3.8"
 
 [scripts]
-ftsubset = "pyftsubset"

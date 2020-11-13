@@ -5,4 +5,5 @@
   "eslint.workingDirectories": [
     "./nuxt-app"
   ],
+  "javascript.suggestionActions.enabled": false
 }

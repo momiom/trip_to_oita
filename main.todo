@@ -1,0 +1,12 @@
+Todo:
+  card component:
+    ☐ base card component の作成
+    ☐ 複数画像の card component の作成
+  comment component:
+    ☐ comment component の作成
+  背景:
+    ☐ スケジュール画面の背景作成
+  todo list:
+    ☐ 持ち物リストの作成
+  deploy:
+    ☐ DNS設定

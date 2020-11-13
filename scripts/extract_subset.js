@@ -30,7 +30,7 @@ const scrapeAll = async (routes) => {
 }
 
 const main = async () => {
-  const routes = ['/']
+  const routes = ['/', '/day1', '/day2']
   const subsetPath = path.resolve(__dirname, 'subset.txt')
   await listen()
   const text = await scrapeAll(routes)

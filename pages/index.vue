@@ -1,73 +1,64 @@
 <template>
-  <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        trip_to_oita
-      </h1>
-      <h2 class="subtitle">
-        Trip to Oita.
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
+  <div class="container mx-auto px-5">
+    <h1 class="text-main-black text-center text-4xl mt-32 tracking-widest">
+      別府旅行のしおり
+    </h1>
+    <div class="flex flex-col text-center">
+      <div class="flex flex-col mt-32">
+        <h2>一日目</h2>
+        <nuxt-link to="/day1" class="text-main-link text-2xl underline"
+          >飛行機とサファリ</nuxt-link
         >
-          GitHub
-        </a>
+      </div>
+
+      <div class="flex flex-col mt-20">
+        <h2>二日目</h2>
+        <nuxt-link to="/day2" class="text-main-link text-2xl underline"
+          >地獄めぐりと食べ歩き</nuxt-link
+        >
+      </div>
+
+      <div class="mt-56">
+        <h2 class="text-main-black text-center text-2xl mb-3 underline">
+          持ち物
+        </h2>
+        <div class="mt-4">
+          <check-list>着替え</check-list>
+          <check-list>
+            カメラ<br />
+            （レンズ・フィルター・バッテリー）
+          </check-list>
+          <check-list>充電器・ケーブル</check-list>
+          <check-list>コンタクト</check-list>
+          <check-list>メガネ</check-list>
+          <check-list>メガネ</check-list>
+        </div>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
+import CheckList from '~/components/CheckList'
 
 export default {
   components: {
-    Logo
+    CheckList
   }
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+<style scoped>
+div.container:before {
+  content: '';
   display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  background: url(~assets/images/index/bg.webp) center no-repeat;
+  background-size: cover;
 }
 </style>
