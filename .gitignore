@@ -89,6 +89,3 @@ sw.*
 # Vim swap files
 *.swp
 scripts/subset.txt
-
-Pipfile
-Pipfile.lock
