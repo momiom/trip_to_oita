@@ -1,6 +1,6 @@
 # trip_to_oita
 
-> Trip to Oita.
+https://trip-to-oita.netlify.app/
 
 ## Build Setup
 
